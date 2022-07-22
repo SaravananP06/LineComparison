@@ -9,10 +9,10 @@ public class LineComparisonProgram {
 	    int x2 = 6;
 	    int y1 = 7;
 	    int y2 = 8;
-	    int a1 = 3;
-	    int a2 = 4;
-	    int b1 = 4;
-	    int b2 = 5;
+	    int a1 = 6;
+	    int a2 = 8;
+	    int b1 = 8;
+	    int b2 = 10;
 	    
 	    // Logic to find length of line
 	    double lengthOfFirstLine = Math.sqrt((Math.pow((x2-x1), 2) + (Math.pow((y2-y1), 2))));
@@ -25,8 +25,16 @@ public class LineComparisonProgram {
 	    Integer obj1 = new Integer ((int) lengthOfFirstLine);
 	    Integer obj2 = new Integer ((int) lengthOfSecondLine);
 	    
-	    // Comparing both line
-	    System.out.println("Two Lines are: " + (obj1.equals(obj2)));
+	    // Compare both lines with compareTo method
+	    if (obj1.compareTo(obj2) > 0) {
+        	System.out.println("The length of the first line is greater");
+        }
+	    else if (obj1.compareTo(obj2) < 0) {
+	    	System.out.println("The length of the second line is greater");
+	    }
+        else {
+        	System.out.println("The both lines are equal");
+        }
 	}
 
 }
